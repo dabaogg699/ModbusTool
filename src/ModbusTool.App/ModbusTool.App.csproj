@@ -19,6 +19,8 @@
   <!-- 内置出厂默认模板：嵌入为资源（只读），首次启动或【重置为初始模板】时加载。 -->
   <ItemGroup>
     <EmbeddedResource Include="Assets\Templates\default-template.mbwork" />
+    <!-- 打赏二维码走 WPF Resource，XAML 通过 /ModbusTool;component/Assets/wechat-donate-qr.png 引用。 -->
+    <Resource Include="Assets\wechat-donate-qr.png" />
   </ItemGroup>
 
   <PropertyGroup>

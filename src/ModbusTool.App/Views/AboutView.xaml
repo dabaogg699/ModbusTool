@@ -101,6 +101,18 @@
                     </StackPanel>
                 </Grid>
 
+                <!-- 微信打赏二维码：以 WPF Resource 嵌入 ModbusTool 程序集（AssemblyName 为 ModbusTool，非 ModbusTool.App）。 -->
+                <Border HorizontalAlignment="Center" Margin="0,12,0,0" Background="{DynamicResource CardBackgroundBrush}"
+                        BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="10,8">
+                    <StackPanel>
+                        <Image Source="/ModbusTool;component/Assets/wechat-donate-qr.png"
+                               Width="150" Height="150" Stretch="Uniform"
+                               RenderOptions.BitmapScalingMode="HighQuality" />
+                        <TextBlock Text="微信扫码打赏作者" FontSize="10" Margin="0,5,0,0" HorizontalAlignment="Center"
+                                   Foreground="{DynamicResource MutedTextBrush}" />
+                    </StackPanel>
+                </Border>
+
             </StackPanel>
         </GroupBox>
 
