@@ -1,0 +1,20 @@
+<Project>
+
+  <!--
+    net6 旧系统兼容版的编译器特性与 API 补齐文件。
+    仅在内层构建的 net6 目标下链接，net8 主版保持原样，不引入任何额外代码。
+  -->
+  <ItemGroup>
+    <!-- ArgumentGuard 同时被 net8 与 net6 代码调用，所有目标框架统一链接。 -->
+    <Compile Include="$(MSBuildThisFileDirectory)build\compat\ArgumentGuard.cs" Link="Properties\ArgumentGuard.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0' or '$(TargetFramework)' == 'net6.0-windows'">
+    <Compile Include="$(MSBuildThisFileDirectory)build\compat\RequiredMembers.cs" Link="Properties\RequiredMembers.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition="('$(TargetFramework)' == 'net6.0' or '$(TargetFramework)' == 'net6.0-windows') and $(MSBuildProjectName.EndsWith('.Tests'))">
+    <Compile Include="$(MSBuildThisFileDirectory)build\compat\StreamReadExactly.cs" Link="Properties\StreamReadExactly.cs" />
+  </ItemGroup>
+
+</Project>

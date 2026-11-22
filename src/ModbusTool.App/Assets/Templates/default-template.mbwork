@@ -1,0 +1,87 @@
+{
+  "SchemaVersion": 1,
+  "Name": "默认模板",
+  "Connection": {
+    "Kind": "Tcp",
+    "PortName": "COM1",
+    "BaudRate": 9600,
+    "DataBits": 8,
+    "Parity": "None",
+    "StopBits": "One",
+    "Host": "127.0.0.1",
+    "Port": 502,
+    "ResponseTimeoutMs": 1000,
+    "RetryCount": 2,
+    "RetryDelayMs": 50,
+    "ReconnectDelayMs": 1000,
+    "FrameIntervalMs": 10,
+    "QueueCapacity": 1000
+  },
+  "Devices": [
+    {
+      "Id": "10000000-0000-0000-0000-000000000001",
+      "Name": "从站 1",
+      "UnitId": 1,
+      "Enabled": true,
+      "PollIntervalMs": 1000,
+      "PollOffsetMs": 0,
+      "ReadBlocks": [
+        {
+          "Id": "10000000-0000-0000-0000-000000000002",
+          "Name": "保持寄存器 0-9",
+          "Function": "ReadHoldingRegisters",
+          "StartAddress": 0,
+          "Quantity": 10,
+          "Points": [
+            {
+              "Id": "10000000-0000-0000-0000-000000000003",
+              "Name": "寄存器 0",
+              "AddressOffset": 0,
+              "DataType": "UInt16",
+              "ByteOrder": "Order1032",
+              "Scale": 1,
+              "Offset": 0,
+              "Unit": "",
+              "HistoryEnabled": false,
+              "GroupName": "默认分组",
+              "Note": ""
+            },
+            {
+              "Id": "10000000-0000-0000-0000-000000000004",
+              "Name": "寄存器 1",
+              "AddressOffset": 1,
+              "DataType": "UInt16",
+              "ByteOrder": "Order1032",
+              "Scale": 1,
+              "Offset": 0,
+              "Unit": "",
+              "HistoryEnabled": false,
+              "GroupName": "默认分组",
+              "Note": ""
+            },
+            {
+              "Id": "10000000-0000-0000-0000-000000000005",
+              "Name": "寄存器 2",
+              "AddressOffset": 2,
+              "DataType": "UInt16",
+              "ByteOrder": "Order1032",
+              "Scale": 1,
+              "Offset": 0,
+              "Unit": "",
+              "HistoryEnabled": false,
+              "GroupName": "默认分组",
+              "Note": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "PointGroups": [
+    {
+      "Name": "默认分组",
+      "IsExpanded": true
+    }
+  ],
+  "TrendSeriesStyles": []
+}

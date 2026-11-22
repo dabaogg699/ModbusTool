@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">ModbusMaster 主站请求图标</title>
+  <desc id="desc">原创工业风图标：深蓝控制终端、白色 M 与向右发出的青蓝请求箭头。全部字形和图形均为可编辑路径，无外部字体、图片或第三方素材依赖。</desc>
+  <!-- 256 画布，8 px 透明安全边距；粗笔画和开放间距兼顾 16 px 小尺寸。 -->
+  <defs>
+    <linearGradient id="panel" x1="28" y1="20" x2="224" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#174C6B"/>
+      <stop offset="1" stop-color="#0B2540"/>
+    </linearGradient>
+    <linearGradient id="request" x1="155" y1="190" x2="210" y2="49" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#67E8F9"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="url(#panel)"/>
+  <rect x="12.5" y="12.5" width="231" height="231" rx="44" fill="none" stroke="#9ADCF0" stroke-opacity="0.38" stroke-width="3"/>
+  <path d="M39 191V105L79 151L119 105V191" fill="none" stroke="#F1F7FB" stroke-width="22" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M155 190V76H210M183 49L210 76L183 103" fill="none" stroke="url(#request)" stroke-width="20" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>

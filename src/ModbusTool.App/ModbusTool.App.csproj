@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModbusCore\ModbusCore.csproj" />
+    <ProjectReference Include="..\ModbusMaster\ModbusMaster.csproj" />
+    <ProjectReference Include="..\ModbusSlave\ModbusSlave.csproj" />
+    <ProjectReference Include="..\ModbusTool.Update\ModbusTool.Update.csproj" />
+  </ItemGroup>
+
+  <!-- net8 主版使用 ScottPlot 5.1.x；net6 旧系统版必须使用仍提供 net6.0-windows 资产的 5.0.x。 -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-windows'">
+    <PackageReference Include="ScottPlot.WPF" Version="5.1.59" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0-windows'">
+    <PackageReference Include="ScottPlot.WPF" Version="5.0.55" />
+  </ItemGroup>
+
+  <!-- 内置出厂默认模板：嵌入为资源（只读），首次启动或【重置为初始模板】时加载。 -->
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Templates\default-template.mbwork" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworks>net8.0-windows;net6.0-windows</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>ModbusTool</AssemblyName>
+    <RootNamespace>ModbusTool.App</RootNamespace>
+    <!-- SkiaSharp.Views.WPF 对 net8.0-windows 走 .NET Framework 资产回退，运行时验证正常。 -->
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+  </PropertyGroup>
+
+</Project>

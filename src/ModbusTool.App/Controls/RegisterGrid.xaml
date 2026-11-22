@@ -1,0 +1,123 @@
+﻿<!-- © 2026 工控菜鸡刘 · ModbusTool · MIT License -->
+<UserControl x:Class="ModbusTool.App.Controls.RegisterGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ModbusTool.App.Controls">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <DockPanel Margin="0,0,0,6" LastChildFill="False">
+            <TextBlock Text="筛选：" VerticalAlignment="Center" />
+            <TextBox x:Name="FilterBox" MinWidth="160" Width="220" VerticalAlignment="Center"
+                     TextChanged="OnFilterChanged" />
+            <Button Content="显示列 ▾" Padding="8,2" Margin="8,0,0,0">
+                <Button.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="地址" Tag="Address" IsCheckable="True" IsChecked="True" Click="OnColumnToggleClick" />
+                        <MenuItem Header="十六进制地址" Tag="AddressHex" IsCheckable="True" IsChecked="True" Click="OnColumnToggleClick" />
+                        <MenuItem Header="值" Tag="Value" IsCheckable="True" IsChecked="True" Click="OnColumnToggleClick" />
+                        <MenuItem Header="原始十六进制" Tag="Hex" IsCheckable="True" IsChecked="True" Click="OnColumnToggleClick" />
+                        <MenuItem Header="二进制" Tag="Binary" IsCheckable="True" IsChecked="True" Click="OnColumnToggleClick" />
+                        <MenuItem Header="字符串" Tag="Text" IsCheckable="True" IsChecked="False" Click="OnColumnToggleClick" />
+                        <MenuItem Header="状态" Tag="Status" IsCheckable="True" IsChecked="True" Click="OnColumnToggleClick" />
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+            <TextBlock x:Name="CountText" Text="共 0 项" VerticalAlignment="Center" Margin="8,0,0,0"
+                       Foreground="{DynamicResource MutedTextBrush}" />
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+                <Button Content="导出当前表…" Padding="8,2" Margin="0,0,5,0"
+                        Command="{Binding ExportCommand, RelativeSource={RelativeSource AncestorType=local:RegisterGrid}}">
+                    <Button.Style>
+                        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                            <Setter Property="Visibility" Value="Visible" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ExportCommand, RelativeSource={RelativeSource AncestorType=local:RegisterGrid}}"
+                                             Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Content="?" Width="28" Padding="0" Style="{StaticResource IconButton}"
+                        ToolTip="双击“值”单元格编辑；支持十进制或 0x 开头的十六进制输入。通过“显示列”可开关列。" />
+            </StackPanel>
+        </DockPanel>
+        <Grid Grid.Row="1">
+            <DataGrid x:Name="Grid" AutoGenerateColumns="False" CanUserAddRows="False"
+                      CanUserDeleteRows="False" CanUserResizeRows="False" SelectionMode="Single"
+                      EnableRowVirtualization="True" EnableColumnVirtualization="True" FrozenColumnCount="1"
+                      IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource AncestorType=local:RegisterGrid}}"
+                      SelectedItem="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=local:RegisterGrid}, Mode=TwoWay}"
+                      BeginningEdit="OnBeginningEdit" CellEditEnding="OnCellEditEnding"
+                      PreviewMouseRightButtonDown="OnPreviewMouseRightButtonDown" ContextMenuOpening="OnContextMenuOpening"
+                      HeadersVisibility="Column">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="写入此值…" Click="OnWriteValueClick" />
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="AddressColumn" Header="地址" Binding="{Binding Address}" IsReadOnly="True" Width="70" />
+                    <DataGridTextColumn x:Name="AddressHexColumn" Header="十六进制" Binding="{Binding AddressHex}" IsReadOnly="True" Width="100">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="FontFamily" Value="Consolas" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn x:Name="ValueColumn" Header="值" Binding="{Binding Value, UpdateSourceTrigger=PropertyChanged}" Width="110" />
+                    <DataGridTextColumn x:Name="HexColumn" Header="原始十六进制" Binding="{Binding HexValue}" IsReadOnly="True" Width="130">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="FontFamily" Value="Consolas" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn x:Name="BinaryColumn" Header="二进制" Binding="{Binding BinaryValue}" IsReadOnly="True" Width="160" MinWidth="140">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="FontFamily" Value="Consolas" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn x:Name="TextColumn" Header="字符串" Binding="{Binding TextValue}" IsReadOnly="True" Width="*" MinWidth="120" Visibility="Collapsed" />
+                    <DataGridTemplateColumn x:Name="StatusColumn" Header="状态" Width="80" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Status}">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="Foreground" Value="{DynamicResource StatusUnknownBrush}" />
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding State}" Value="Fresh">
+                                                    <Setter Property="Foreground" Value="{DynamicResource StatusFreshBrush}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding State}" Value="Stale">
+                                                    <Setter Property="Foreground" Value="{DynamicResource StatusStaleBrush}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding State}" Value="Error">
+                                                    <Setter Property="Foreground" Value="{DynamicResource StatusErrorBrush}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding State}" Value="WritePending">
+                                                    <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <local:EmptyStateControl x:Name="EmptyState" Icon="&#xE7C4;"
+                                     Title="{Binding EmptyTitle, RelativeSource={RelativeSource AncestorType=local:RegisterGrid}}"
+                                     Description="{Binding EmptyDescription, RelativeSource={RelativeSource AncestorType=local:RegisterGrid}}"
+                                     Visibility="Collapsed" />
+        </Grid>
+    </Grid>
+</UserControl>

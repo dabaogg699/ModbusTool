@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">ModbusSlave 从站应答图标</title>
+  <desc id="desc">原创工业风图标：深灰仿真终端、白色 S 与向左返回的橙色应答箭头。全部字形和图形均为可编辑路径，无外部字体、图片或第三方素材依赖。</desc>
+  <!-- 256 画布，8 px 透明安全边距；粗笔画和开放间距兼顾 16 px 小尺寸。 -->
+  <defs>
+    <linearGradient id="panel" x1="28" y1="20" x2="224" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3A434C"/>
+      <stop offset="1" stop-color="#20262C"/>
+    </linearGradient>
+    <linearGradient id="response" x1="211" y1="190" x2="157" y2="49" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FFC15C"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="url(#panel)"/>
+  <rect x="12.5" y="12.5" width="231" height="231" rx="44" fill="none" stroke="#D7DEE4" stroke-opacity="0.38" stroke-width="3"/>
+  <path d="M133 105H77C55 105 42 114 42 128C42 142 55 150 79 150H99C122 150 135 159 135 174C135 189 121 198 98 198H41" fill="none" stroke="#F3F4F6" stroke-width="20" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M211 190V76H157M184 49L157 76L184 103" fill="none" stroke="url(#response)" stroke-width="20" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,13 @@
+﻿<!-- © 2026 工控菜鸡刘 · ModbusTool · MIT License -->
+<Application x:Class="ModbusSlaveApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ModbusTool;component/Themes/Light.xaml" />
+                <ResourceDictionary Source="/ModbusTool;component/Themes/Controls.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

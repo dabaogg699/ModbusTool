@@ -1,0 +1,21 @@
+{
+   "updateurl":"http://upcomputer.f3322.org:1005/upload/mbslave/",
+   "commhistory":[
+      "COM1,19200,N,8,1", 
+      "tcp:502", 
+      "COM22,19200,N,8,1", 
+      "COM2,19200,N,8,1", 
+      "COM22,9600,N,8,1", 
+      "COM13,9600,N,8,1", 
+      "COM13,19200,N,8,1", 
+      "COM7,9600,N,8,1", 
+      "COM10,9600,N,8,1", 
+      "COM11,9600,N,8,1"
+   ],
+   "commstation":"1",
+   "lastdbfile":"data.bin",
+   "regsmallendian":"1",
+   "tbmode":"1",
+   "tboffset":"0",
+   "strencode":"gb2312"
+}

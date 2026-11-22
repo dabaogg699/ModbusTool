@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModbusCore\ModbusCore.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net6.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- 从站入口可执行文件名为 ModbusSlave.exe，类库改用 Core 后缀避免与入口程序集同名冲突 -->
+    <AssemblyName>ModbusSlave.Core</AssemblyName>
+    <RootNamespace>ModbusSlave</RootNamespace>
+  </PropertyGroup>
+
+</Project>

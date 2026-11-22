@@ -1,0 +1,69 @@
+﻿<!-- © 2026 工控菜鸡刘 · ModbusTool · MIT License -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="WindowBackgroundColor">#F1F5F9</Color>
+    <Color x:Key="PanelColor">#FFFFFF</Color>
+    <Color x:Key="PanelAltColor">#F8FAFC</Color>
+    <Color x:Key="BorderColor">#CBD5E1</Color>
+    <Color x:Key="TextColor">#0F172A</Color>
+    <Color x:Key="MutedTextColor">#64748B</Color>
+    <Color x:Key="AccentColor">#2563EB</Color>
+    <Color x:Key="AccentHoverColor">#1D4ED8</Color>
+    <Color x:Key="SuccessColor">#059669</Color>
+    <Color x:Key="ErrorColor">#DC2626</Color>
+    <Color x:Key="InputBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="SelectionColor">#DBEAFE</Color>
+
+    <SolidColorBrush x:Key="WindowBackgroundBrush" Color="{StaticResource WindowBackgroundColor}" />
+    <SolidColorBrush x:Key="PanelBrush" Color="{StaticResource PanelColor}" />
+    <SolidColorBrush x:Key="PanelAltBrush" Color="{StaticResource PanelAltColor}" />
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource BorderColor}" />
+    <SolidColorBrush x:Key="TextBrush" Color="{StaticResource TextColor}" />
+    <SolidColorBrush x:Key="MutedTextBrush" Color="{StaticResource MutedTextColor}" />
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource AccentColor}" />
+    <SolidColorBrush x:Key="AccentHoverBrush" Color="{StaticResource AccentHoverColor}" />
+    <SolidColorBrush x:Key="OnAccentBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="SuccessBrush" Color="{StaticResource SuccessColor}" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}" />
+    <SolidColorBrush x:Key="InputBackgroundBrush" Color="{StaticResource InputBackgroundColor}" />
+    <SolidColorBrush x:Key="SelectionBrush" Color="{StaticResource SelectionColor}" />
+
+    <Color x:Key="StatusFreshColor">#059669</Color>
+    <Color x:Key="StatusStaleColor">#94A3B8</Color>
+    <Color x:Key="StatusErrorColor">#DC2626</Color>
+    <Color x:Key="StatusUnknownColor">#B6C2CF</Color>
+    <Color x:Key="StatusFreshBackgroundColor">#E8F7F1</Color>
+    <Color x:Key="StatusStaleBackgroundColor">#F1F5F9</Color>
+    <Color x:Key="StatusErrorBackgroundColor">#FDECEC</Color>
+    <Color x:Key="StatusUnknownBackgroundColor">#F7F9FB</Color>
+    <Color x:Key="PacketSentColor">#1D4ED8</Color>
+    <Color x:Key="PacketReceivedColor">#047857</Color>
+    <Color x:Key="PacketErrorColor">#DC2626</Color>
+    <Color x:Key="PacketExceptionColor">#C2410C</Color>
+    <Color x:Key="PacketCrcMalformedColor">#B45309</Color>
+
+    <SolidColorBrush x:Key="StatusFreshBrush" Color="{StaticResource StatusFreshColor}" />
+    <SolidColorBrush x:Key="StatusStaleBrush" Color="{StaticResource StatusStaleColor}" />
+    <SolidColorBrush x:Key="StatusErrorBrush" Color="{StaticResource StatusErrorColor}" />
+    <SolidColorBrush x:Key="StatusUnknownBrush" Color="{StaticResource StatusUnknownColor}" />
+    <SolidColorBrush x:Key="StatusFreshBackgroundBrush" Color="{StaticResource StatusFreshBackgroundColor}" />
+    <SolidColorBrush x:Key="StatusStaleBackgroundBrush" Color="{StaticResource StatusStaleBackgroundColor}" />
+    <SolidColorBrush x:Key="StatusErrorBackgroundBrush" Color="{StaticResource StatusErrorBackgroundColor}" />
+    <SolidColorBrush x:Key="StatusUnknownBackgroundBrush" Color="{StaticResource StatusUnknownBackgroundColor}" />
+    <SolidColorBrush x:Key="PacketSentBrush" Color="{StaticResource PacketSentColor}" />
+    <SolidColorBrush x:Key="PacketReceivedBrush" Color="{StaticResource PacketReceivedColor}" />
+    <SolidColorBrush x:Key="PacketErrorBrush" Color="{StaticResource PacketErrorColor}" />
+    <SolidColorBrush x:Key="PacketExceptionBrush" Color="{StaticResource PacketExceptionColor}" />
+    <SolidColorBrush x:Key="PacketCrcMalformedBrush" Color="{StaticResource PacketCrcMalformedColor}" />
+
+    <SolidColorBrush x:Key="HeaderBrush" Color="#F5F7FA" />
+    <SolidColorBrush x:Key="SidebarBrush" Color="#EDEFF2" />
+    <SolidColorBrush x:Key="MainContentBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="StatusBarBrush" Color="#F0F2F5" />
+    <SolidColorBrush x:Key="NavHoverBrush" Color="#E2E6ED" />
+    <SolidColorBrush x:Key="NavActiveBrush" Color="#2563EB" />
+    <SolidColorBrush x:Key="NavActiveTextBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="GroupHeaderBrush" Color="#F1F5F9" />
+    <SolidColorBrush x:Key="NavTextBrush" Color="#1F2937" />
+    <SolidColorBrush x:Key="HeaderTextBrush" Color="#1F2937" />
+</ResourceDictionary>

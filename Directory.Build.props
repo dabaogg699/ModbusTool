@@ -1,0 +1,16 @@
+<Project>
+
+  <!--
+    版本号唯一来源：version.json 的 current 字段。
+    该文件由 scripts/version.ps1 -Command bump 自动同步，禁止手工修改后不同步。
+    单个 csproj 内不要再写 <Version>，否则会覆盖此处并导致版本漂移。
+  -->
+  <PropertyGroup>
+    <Version>1.1.9</Version>
+    <!-- 旧系统兼容版目标 net6.0，SDK 会按 EOL 目标框架给出 NETSDK1138；此处显式关闭，保持发布构建 0 警告。 -->
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <!-- SDK 8 编译器统一使用最新 C# 版本；net6 目标同样启用集合表达式等语法。 -->
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+</Project>

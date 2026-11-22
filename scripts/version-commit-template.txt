@@ -1,0 +1,65 @@
+版本变更提交模板
+================
+
+提交标题：release: <MAJOR.MINOR.PATCH[-prerelease][+build]>
+
+一、版本号
+----------
+上一版本：<上一完整 SemVer>
+本次版本：<本次完整 SemVer>
+变更级别：<major / minor / patch；预发布转稳定版请注明>
+唯一版本源：version.json（current）
+同步确认：Directory.Build.props 已同步；CHANGELOG.md 已包含本次版本条目
+项目覆盖检查：src/**/*.csproj 未声明 <Version> 节点
+
+二、分类变更摘要
+----------------
+### 新增
+- <分类说明；无则填写“无”>
+
+### 优化
+- <分类说明；无则填写“无”>
+
+### 修复
+- <分类说明；无则填写“无”>
+
+### 破坏性变更与迁移说明
+- <兼容性影响、配置/数据迁移步骤；无则填写“无”>
+
+三、测试证据
+------------
+版本格式与同步校验：
+- 命令：powershell -ExecutionPolicy Bypass -File scripts\version.ps1 -Command validate
+- 结果：<通过 / 失败；附关键输出或日志位置>
+
+自动化测试：
+- 命令：<实际执行的构建/测试命令>
+- 结果：<通过数量、失败数量、警告数量；附测试日志位置>
+
+手工与回归验证：
+- 范围：<功能、平台、运行环境及关键场景>
+- 结果：<实际观察结果与证据位置>
+
+未执行项目及原因：
+- <没有则填写“无”；不得把未执行项目写成已通过>
+
+四、发布产物校验
+----------------
+发布版本：<与 version.json 的 current 及实际发布版本一致>
+运行时：<例如 win-x64>
+程序目录：
+- publish/MBScan：<存在性、启动/冒烟检查及结果>
+- publish/MBSlave：<存在性、启动/冒烟检查及结果>
+
+ZIP 产物：
+- publish/ModbusMaster-<版本>-<Runtime>.zip：<存在性、大小、SHA256、解压检查结果>
+- publish/ModbusSlave-<版本>-<Runtime>.zip：<存在性、大小、SHA256、解压检查结果>
+- publish/ModbusTool-<版本>-source.zip：<存在性、大小、SHA256、排除项检查结果>
+
+版本一致性：
+- <Version / InformationalVersion 为完整 SemVer>
+- <AssemblyVersion / FileVersion 为 MAJOR.MINOR.PATCH.0>
+- <程序配置、ZIP 文件名与 released 记录一致>
+
+发布记录：version.json 的 released 已登记版本、日期、类型和摘要
+未发布或未生成产物时的说明：<明确填写“未执行发布/未生成产物”及原因，不伪造校验值>

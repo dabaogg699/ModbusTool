@@ -1,0 +1,143 @@
+﻿<!-- © 2026 工控菜鸡刘 · ModbusTool · MIT License -->
+<UserControl x:Class="ModbusTool.App.Controls.PacketMonitor"
+             x:Name="Root"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ModbusTool.App.Controls">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <WrapPanel Margin="0,0,0,5">
+            <ToggleButton x:Name="PauseButton" Content="暂停" MinWidth="64" Margin="0,0,6,0"
+                          Checked="OnPauseChanged" Unchecked="OnPauseChanged"
+                          ToolTip="暂停 / 继续实时捕获；暂停期间到达的报文不会写入缓存，已有报文保持不变" />
+            <Button Content="清空" MinWidth="64" Margin="0,0,12,0" Click="OnClearClick"
+                    ToolTip="清空当前缓存、筛选结果与超限落盘文件引用" />
+            <TextBlock Text="方向" VerticalAlignment="Center" Margin="0,0,5,0" />
+            <ComboBox x:Name="DirectionFilterBox" Width="78" Margin="0,0,10,0" SelectedIndex="0" SelectionChanged="OnDirectionFilterChanged"
+                      ToolTip="按收发方向筛选：全部 / 发送 / 接收">
+                <ComboBoxItem Content="全部" />
+                <ComboBoxItem Content="发送" />
+                <ComboBoxItem Content="接收" />
+            </ComboBox>
+            <TextBlock Text="CRC" VerticalAlignment="Center" Margin="0,0,5,0" />
+            <ComboBox x:Name="CrcFilterBox" Width="120" Margin="0,0,10,0" SelectedIndex="0" SelectionChanged="OnDirectionFilterChanged"
+                      ToolTip="按 CRC 校验结果筛选：仅 CRC 不匹配（红色）或仅帧不完整（斜体）">
+                <ComboBoxItem Content="全部" />
+                <ComboBoxItem Content="仅 CRC 不匹配" />
+                <ComboBoxItem Content="仅帧不完整" />
+            </ComboBox>
+            <TextBlock Text="站号" VerticalAlignment="Center" Margin="0,0,5,0" />
+            <TextBox x:Name="UnitFilterBox" Width="56" TextChanged="OnFilterChanged"
+                     ToolTip="按从站地址筛选，十进制；留空表示不限" />
+            <TextBlock Text="功能码" VerticalAlignment="Center" Margin="10,0,5,0" />
+            <TextBox x:Name="FunctionFilterBox" Width="64" TextChanged="OnFilterChanged"
+                     ToolTip="按功能码筛选，支持 03 或 0x03；留空表示不限" />
+            <TextBlock Text="缓存上限" VerticalAlignment="Center" Margin="12,0,5,0" />
+            <TextBox x:Name="MaxEntriesBox" Width="62" Text="5000" LostFocus="OnMaxEntriesChanged"
+                     ToolTip="默认 5000 条；超出后丢弃最早报文，缓存不会无限增长" />
+            <CheckBox x:Name="AutoExportBox" Content="超限自动落盘" VerticalAlignment="Center" Margin="10,0,0,0"
+                      ToolTip="超过缓存上限时，把被淘汰的报文追加写入 logs\PacketLog_时间戳.txt，避免报文丢失" />
+            <Button Content="导出..." MinWidth="72" Margin="10,0,0,0" Click="OnExportClick"
+                    ToolTip="把当前筛选结果导出为 UTF-8 文本日志" />
+        </WrapPanel>
+
+        <WrapPanel Grid.Row="1" Margin="0,0,0,6">
+            <TextBlock Text="实时报文查看区" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,10,0" />
+            <Border Width="12" Height="12" Background="{DynamicResource PacketSentBrush}" CornerRadius="2" VerticalAlignment="Center" />
+            <TextBlock Text="发送" VerticalAlignment="Center" Margin="4,0,10,0" Foreground="{DynamicResource PacketSentBrush}" />
+            <Border Width="12" Height="12" Background="{DynamicResource PacketReceivedBrush}" CornerRadius="2" VerticalAlignment="Center" />
+            <TextBlock Text="正常接收" VerticalAlignment="Center" Margin="4,0,10,0" Foreground="{DynamicResource PacketReceivedBrush}" />
+            <Border Width="12" Height="12" Background="{DynamicResource PacketErrorBrush}" CornerRadius="2" VerticalAlignment="Center" />
+            <TextBlock Text="CRC 错误" VerticalAlignment="Center" Margin="4,0,10,0" Foreground="{DynamicResource PacketErrorBrush}" />
+            <Border Width="12" Height="12" Background="{DynamicResource PacketExceptionBrush}" CornerRadius="2" VerticalAlignment="Center" />
+            <TextBlock Text="异常响应" VerticalAlignment="Center" Margin="4,0,10,0" Foreground="{DynamicResource PacketExceptionBrush}" />
+            <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MutedTextBrush}"
+                       Text="支持按站号、功能码、CRC、收发方向筛选；暂停捕获、清空、导出日志、超限自动落盘；右键可复制单条报文。" />
+        </WrapPanel>
+
+        <DataGrid x:Name="Grid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True"
+                  CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False"
+                  EnableRowVirtualization="True" EnableColumnVirtualization="True" SelectionMode="Single">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="复制当前报文" Click="OnCopyPacketClick" />
+                    <MenuItem Header="复制原始十六进制" Click="OnCopyHexClick" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Foreground" Value="{DynamicResource PacketReceivedBrush}" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Direction}" Value="Sent">
+                            <Setter Property="Foreground" Value="{DynamicResource PacketSentBrush}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsException}" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource PacketExceptionBrush}" />
+                            <Setter Property="FontWeight" Value="SemiBold" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding CrcStatus}" Value="Mismatch">
+                            <Setter Property="Foreground" Value="{DynamicResource PacketErrorBrush}" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding CrcStatus}" Value="Malformed">
+                            <Setter Property="Foreground" Value="{DynamicResource PacketCrcMalformedBrush}" />
+                            <Setter Property="FontStyle" Value="Italic" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Timestamp, StringFormat=HH:mm:ss.fff}" Width="Auto" MinWidth="105">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="时间" ToolTip="报文捕获时间，精确到毫秒" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding OperationText}" Width="85">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="操作" ToolTip="写功能码明确标记为写入请求或写入应答；其余帧显示收发方向" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding UnitText}" Width="55">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="站号" ToolTip="从站地址（十进制）；顶部站号框可按该值筛选" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding FunctionText}" Width="65">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="功能码" ToolTip="十六进制功能码，如 03、10；最高位为 1 表示异常响应（橙色）" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding CrcText}" Width="95">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="CRC" ToolTip="RTU 帧校验：正常 / CRC 不匹配（红色）/ 帧不完整（斜体）；TCP 帧不适用" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding ConnectionId}" Width="100">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="连接" ToolTip="TCP 连接标识或 RTU 串口名称" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Length}" Width="55">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="长度" ToolTip="原始报文字节数" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding HexData}" Width="Auto" MinWidth="240">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="原始报文" ToolTip="完整十六进制报文；右键可复制整条报文或原始十六进制" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <local:EmptyStateControl x:Name="EmptyState" Grid.Row="2" Icon="&#xE7C4;"
+                                 Title="等待报文"
+                                 Description="启动监听或主站轮询后，Modbus 收发报文将在此实时展示。"
+                                 Visibility="Collapsed" />
+        <TextBlock x:Name="StatusText" Grid.Row="3" Margin="0,5,0,0" Foreground="{DynamicResource MutedTextBrush}" />
+    </Grid>
+</UserControl>

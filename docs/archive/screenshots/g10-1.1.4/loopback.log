@@ -1,0 +1,43 @@
+﻿INFO: 从站已监听 127.0.0.1:502，站号 1，100 个保持寄存器
+INFO: 主站已启动 IsRunning=True
+RUNNING 30s sent=607 recv=607 err=0 points=1490 uiLag=194.5ms managed=18.1MiB handles=1376
+RUNNING 60s sent=1214 recv=1214 err=0 points=2970 uiLag=194.5ms managed=27.7MiB handles=1367
+BOUNDARY 1: 切换深色主题
+RUNNING 90s sent=1820 recv=1820 err=0 points=3120 uiLag=194.5ms managed=18.2MiB handles=1376
+RUNNING 120s sent=2427 recv=2427 err=0 points=3280 uiLag=194.5ms managed=16.2MiB handles=1372
+BOUNDARY 2: 暂停 4 秒后恢复
+RUNNING 154s sent=3115 recv=3115 err=0 points=4778 uiLag=194.5ms managed=28.9MiB handles=1373
+RUNNING 184s sent=3721 recv=3721 err=0 points=6166 uiLag=194.5ms managed=26.1MiB handles=1373
+RUNNING 215s sent=4330 recv=4330 err=0 points=7446 uiLag=194.5ms managed=21.2MiB handles=1363
+BOUNDARY 3: 隐藏/恢复首条曲线
+RUNNING 245s sent=4936 recv=4936 err=0 points=8686 uiLag=194.5ms managed=16.3MiB handles=1367
+RUNNING 275s sent=5543 recv=5543 err=0 points=9166 uiLag=194.5ms managed=16.4MiB handles=1367
+BOUNDARY 4: 修改曲线样式后重置
+RUNNING 305s sent=6151 recv=6151 err=0 points=9316 uiLag=194.5ms managed=24.3MiB handles=1371
+RUNNING 335s sent=6758 recv=6758 err=0 points=10233 uiLag=194.5ms managed=27.9MiB handles=1361
+RUNNING 365s sent=7364 recv=7364 err=0 points=11431 uiLag=194.5ms managed=23.6MiB handles=1372
+BOUNDARY 5: 切换工业蓝主题
+RUNNING 395s sent=7971 recv=7971 err=0 points=12638 uiLag=194.5ms managed=31.9MiB handles=1369
+RUNNING 425s sent=8578 recv=8578 err=0 points=13838 uiLag=194.5ms managed=25.8MiB handles=1376
+BOUNDARY 6: 重整采样与清空/恢复单条曲线
+RUNNING 455s sent=9184 recv=9184 err=0 points=15100 uiLag=194.5ms managed=13.7MiB handles=1376
+RUNNING 485s sent=9791 recv=9791 err=0 points=15520 uiLag=194.5ms managed=18.7MiB handles=1376
+RUNNING 515s sent=10400 recv=10400 err=0 points=15670 uiLag=194.5ms managed=31.0MiB handles=1369
+BOUNDARY 7: 恢复浅色主题
+RUNNING 545s sent=11007 recv=11007 err=0 points=16599 uiLag=194.5ms managed=24.4MiB handles=1364
+RUNNING 575s sent=11613 recv=11613 err=0 points=17799 uiLag=194.5ms managed=14.2MiB handles=1358
+FINAL sent=12143 recv=12143 err=0 points=18809 pending=0 packets=5000 logs=300 uiLag=194.5ms managed=20.3MiB min=13.7 max=31.9 handles=1358->1376 firstHalfAvg=21.0 secondHalfAvg=23.5 maxPoints=17799
+INFO: 截图 docs/archive/screenshots/g10-1.1.4/loopback-trend.png
+PASS: 运行时长 602s ≥ 600s
+PASS: 通信错误 0（实际 0）
+PASS: 发送帧 12143 > 10000
+PASS: 收发基本配对（12143/12143）
+PASS: 趋势采集点 18809 ≥ 5000
+PASS: 趋势等待队列清空（残留 0）
+PASS: 报文监视器缓存 5000 ≥ 5000
+PASS: 日志面板有记录（300 条）
+PASS: UI 最大调度延迟 194.5ms < 500ms
+PASS: 托管堆锯齿 18.2MiB < 40MiB
+PASS: 无单向上涨：后半程 23.5 ≤ 前半程 21.0 + 8
+PASS: 句柄增长 18 < 60
+PASS: G10 环回压测通过（沿用 G9 环回测试工具）

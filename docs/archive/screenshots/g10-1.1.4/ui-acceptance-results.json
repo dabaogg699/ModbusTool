@@ -1,0 +1,422 @@
+﻿[
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9 VM \u9884\u7F6E\u5E8F\u5217\u7CBE\u786E\u5339\u914D",
+    "Timestamp": "2026-11-21T19:09:09.6705481\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9\u771F\u5B9E ComboBox \u9879\u7CBE\u786E\u5339\u914D 11 \u4E2A\u9884\u7F6E\u503C",
+    "Timestamp": "2026-11-21T19:09:09.6750346\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9\u771F\u5B9E ComboBox.IsEditable=True",
+    "Timestamp": "2026-11-21T19:09:09.6750676\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9ComboBox.Text \u5B9E\u9645\u7ED1\u5B9A BaudRateText",
+    "Timestamp": "2026-11-21T19:09:09.6750802\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9\u5408\u6CD5\u81EA\u5B9A\u4E49\u503C 12345 \u66F4\u65B0\u6570\u503C\u914D\u7F6E",
+    "Timestamp": "2026-11-21T19:09:09.7625620\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9\u975E\u6CD5\u6587\u672C\u663E\u793A BaudRateError/HasBaudRateError \u4E14\u6570\u503C\u4ECD\u4E3A 12345",
+    "Timestamp": "2026-11-21T19:09:09.8442357\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9\u975E\u6CD5\u8F93\u5165\u9519\u8BEF\u901A\u8FC7\u771F\u5B9E\u63A7\u4EF6 ToolTip \u5448\u73B0\uFF08\u5B9E\u9645=\u6CE2\u7279\u7387\u5FC5\u987B\u4E3A\u5927\u4E8E 0 \u7684\u6574\u6570\u3002\uFF1B\u671F\u671B=\u6CE2\u7279\u7387\u5FC5\u987B\u4E3A\u5927\u4E8E 0 \u7684\u6574\u6570\u3002\uFF09",
+    "Timestamp": "2026-11-21T19:09:09.8442939\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4E3B\u7AD9\u6062\u590D\u5408\u6CD5\u503C\u540E\u9519\u8BEF\u6E05\u9664",
+    "Timestamp": "2026-11-21T19:09:09.9246768\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9 VM \u9884\u7F6E\u5E8F\u5217\u7CBE\u786E\u5339\u914D",
+    "Timestamp": "2026-11-21T19:09:10.5070514\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9\u771F\u5B9E ComboBox \u9879\u7CBE\u786E\u5339\u914D 11 \u4E2A\u9884\u7F6E\u503C",
+    "Timestamp": "2026-11-21T19:09:10.5071397\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9\u771F\u5B9E ComboBox.IsEditable=True",
+    "Timestamp": "2026-11-21T19:09:10.5071492\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9ComboBox.Text \u5B9E\u9645\u7ED1\u5B9A BaudRateText",
+    "Timestamp": "2026-11-21T19:09:10.5071520\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9\u5408\u6CD5\u81EA\u5B9A\u4E49\u503C 12345 \u66F4\u65B0\u6570\u503C\u914D\u7F6E",
+    "Timestamp": "2026-11-21T19:09:10.5887467\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9\u975E\u6CD5\u6587\u672C\u663E\u793A BaudRateError/HasBaudRateError \u4E14\u6570\u503C\u4ECD\u4E3A 12345",
+    "Timestamp": "2026-11-21T19:09:10.6697191\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9\u975E\u6CD5\u8F93\u5165\u9519\u8BEF\u901A\u8FC7\u771F\u5B9E\u63A7\u4EF6 ToolTip \u5448\u73B0\uFF08\u5B9E\u9645=\u6CE2\u7279\u7387\u5FC5\u987B\u4E3A\u5927\u4E8E 0 \u7684\u6574\u6570\u3002\uFF1B\u671F\u671B=\u6CE2\u7279\u7387\u5FC5\u987B\u4E3A\u5927\u4E8E 0 \u7684\u6574\u6570\u3002\uFF09",
+    "Timestamp": "2026-11-21T19:09:10.6697575\u002B08:00"
+  },
+  {
+    "Area": "\u6CE2\u7279\u7387",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9\u6062\u590D\u5408\u6CD5\u503C\u540E\u9519\u8BEF\u6E05\u9664",
+    "Timestamp": "2026-11-21T19:09:10.7517941\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E SlaveService \u4EC5\u76D1\u542C 127.0.0.1:1502",
+    "Timestamp": "2026-11-21T19:09:10.8698721\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u5B9E\u9645 MasterViewModel \u5728 10ms \u8F6E\u8BE2\u4E0B\u6536\u5230\u771F\u5B9E\u5BC4\u5B58\u5668\u503C",
+    "Timestamp": "2026-11-21T19:09:11.3797826\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "24 \u8DEF\u6279\u91CF WriteSingleRegister \u4E0B\u53D1\u540E\u7ACB\u5373\u663E\u793A\u9884\u89C8\u503C\u5E76\u8FDB\u5165 WritePending",
+    "Timestamp": "2026-11-21T19:09:11.3838035\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u6279\u91CF\u5199\u5165\u6302\u8D77\u9501\u521D\u59CB Count=24\uFF08\u9884\u671F 24\uFF09",
+    "Timestamp": "2026-11-21T19:09:11.3839049\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E\u5199\u5E94\u7B54\u540E WritePending \u5168\u90E8\u6E05\u7406\u5E76\u6062\u590D Fresh\uFF08\u72B6\u6001\u6587\u672C\u5141\u8BB8\u88AB\u540E\u7EED\u8F6E\u8BE2\u5237\u65B0\uFF09",
+    "Timestamp": "2026-11-21T19:09:11.6299515\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u5E94\u7B54\u540E\u7684 UI \u771F\u5B9E\u503C\u4E0E\u4ECE\u7AD9\u6570\u636E\u5B58\u50A8 24 \u9879\u5B8C\u5168\u4E00\u81F4",
+    "Timestamp": "2026-11-21T19:09:11.6306377\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E PacketMonitor \u5DF2\u6D88\u5316\u6279\u91CF\u5199\u62A5\u6587",
+    "Timestamp": "2026-11-21T19:09:11.6306983\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u62A5\u6587\u5206\u7C7B\uFF1A\u5199\u5165\u8BF7\u6C42 24\uFF0C\u5199\u5165\u5E94\u7B54 24\uFF08\u5747\u226524\uFF09",
+    "Timestamp": "2026-11-21T19:09:11.6309539\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E\u8F6E\u8BE2/\u5199\u5165\u4EA7\u751F\u8D8B\u52BF\u5386\u53F2\u91C7\u6837",
+    "Timestamp": "2026-11-21T19:09:11.6311146\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E\u5386\u53F2\u5BFC\u51FA\u547D\u4EE4\u002BSaveFileDialog\uFF1AUTF-8 BOM\u30016 \u5B57\u6BB5\u30012 \u6761\u8D8B\u52BF\u8BB0\u5F55",
+    "Timestamp": "2026-11-21T19:09:12.5436384\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u4ECE\u7AD9 100% \u4E22\u5F03\u54CD\u5E94\u540E\u5199\u5165\u5931\u8D25\u5E76\u8FD4\u56DE\u771F\u5B9E\u8D85\u65F6\uFF08TimeoutException\uFF09",
+    "Timestamp": "2026-11-21T19:09:12.8091974\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u8D85\u65F6\u5199\u5165\u6807\u8BB0\u5199\u5165\u5931\u8D25/Error \u4E14\u6302\u8D77\u9501\u6E05\u7406\uFF0C\u53EF\u91CD\u8BD5",
+    "Timestamp": "2026-11-21T19:09:12.8092258\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u5173\u95ED\u4E22\u5305\u540E\u540C\u5730\u5740\u91CD\u8BD5\u6210\u529F\uFF0C\u771F\u5B9E\u503C 5555 \u5DF2\u786E\u8BA4",
+    "Timestamp": "2026-11-21T19:09:13.1346859\u002B08:00"
+  },
+  {
+    "Area": "TCP\u5199\u5165\u8F6E\u8BE2",
+    "Status": "PASS",
+    "Detail": "\u505C\u6B62\u4E3B\u7AD9\u540E\u901A\u4FE1\u7ED3\u675F\u4E14\u65E0\u5199\u5165\u6302\u8D77\u6B8B\u7559",
+    "Timestamp": "2026-11-21T19:09:13.1373192\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "Verbose \u5173\u95ED\u65F6 Trace \u72EC\u7ACB\u8BB0\u5F55\u3001Debug \u88AB\u8FC7\u6EE4",
+    "Timestamp": "2026-11-21T19:09:13.7915697\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E VerboseBox \u5F00\u542F\u540E Debug \u5199\u5165\u5E76\u663E\u793A",
+    "Timestamp": "2026-11-21T19:09:14.0446311\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u5173\u95ED Verbose \u540E\u540E\u7EED Debug \u518D\u6B21\u505C\u6B62\u8BB0\u5F55",
+    "Timestamp": "2026-11-21T19:09:14.2470952\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E\u6E05\u7A7A\u663E\u793A\u6309\u94AE\u6E05\u7A7A\u5386\u53F2\u4E0E\u53EF\u89C1\u8BB0\u5F55",
+    "Timestamp": "2026-11-21T19:09:14.4012225\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "650 \u6761\u771F\u5B9E\u65E5\u5FD7\u5168\u90E8\u4ECE App.Log \u4E8B\u4EF6\u8FDB\u5165 LogView",
+    "Timestamp": "2026-11-21T19:09:15.4199225\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u521D\u59CB\u5206\u9875\u5DF2\u52A0\u8F7D 300 \u6761\uFF08\u9884\u671F 300\uFF09",
+    "Timestamp": "2026-11-21T19:09:15.7701271\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E DataGrid ScrollViewer \u5DF2\u521B\u5EFA",
+    "Timestamp": "2026-11-21T19:09:15.7703262\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u7B2C\u4E00\u6B21\u5411\u4E0B\u6EDA\u52A8\u52A0\u8F7D\u8F83\u65E9\u8BB0\u5F55\u540E 650 \u6761\uFF08\u81F3\u5C11\u4E00\u9875\uFF0C\u5141\u8BB8\u8FDE\u7EED\u89E6\u5E95\u52A0\u8F7D\u4E0B\u4E00\u9875\uFF09",
+    "Timestamp": "2026-11-21T19:09:16.3166459\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u518D\u6B21\u6EDA\u52A8\u52A0\u8F7D\u5269\u4F59\u8BB0\u5F55\u540E 650 \u6761\uFF08\u9884\u671F 650\uFF09",
+    "Timestamp": "2026-11-21T19:09:16.7667796\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u4F1A\u8BDD\u7B5B\u9009 G10-A\uFF1A\u5339\u914D 325\uFF0C\u5F53\u524D\u52A0\u8F7D 300",
+    "Timestamp": "2026-11-21T19:09:17.2547899\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u529F\u80FD\u7801 06 \u7B5B\u9009\uFF1A\u5339\u914D 325\uFF0C\u5F53\u524D\u52A0\u8F7D 300",
+    "Timestamp": "2026-11-21T19:09:17.5554295\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u9519\u8BEF\u7C7B\u578B\u201C\u8D85\u65F6\u201D\u7B5B\u9009\u7CBE\u786E\u5F97\u5230 65 \u6761",
+    "Timestamp": "2026-11-21T19:09:17.8433117\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u7EE7\u7EED\u6CE8\u5165\u540E\u5386\u53F2\u7F13\u5B58\u8FBE\u5230 5000 \u4E14\u5F85\u5904\u7406\u961F\u5217\u6E05\u7A7A",
+    "Timestamp": "2026-11-21T19:09:23.4563993\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "5000 \u5386\u53F2\u4E0A\u9650\u6309\u65B0\u5230\u65E7\u88C1\u51CF\uFF0C\u6700\u65B0 cap-4499\u3001\u6700\u65E7 row-0000 \u5DF2\u6DD8\u6C70",
+    "Timestamp": "2026-11-21T19:09:23.8060435\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E\u6309\u94AE\u002BSaveFileDialog\uFF1A\u9009\u4E2D CSV UTF-8 BOM\u300112 \u5B57\u6BB5\u30012 \u6761\u8BB0\u5F55",
+    "Timestamp": "2026-11-21T19:09:24.5059383\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E\u6309\u94AE\u002BSaveFileDialog\uFF1A\u5168\u90E8 CSV UTF-8 BOM\u300112 \u5B57\u6BB5\u30015000 \u6761\u8BB0\u5F55",
+    "Timestamp": "2026-11-21T19:09:25.4064591\u002B08:00"
+  },
+  {
+    "Area": "\u65E5\u5FD7",
+    "Status": "PASS",
+    "Detail": "\u5168\u90E8 CSV \u7684\u9017\u53F7\u3001\u53CC\u5F15\u53F7\u4E0E\u6362\u884C\u5B57\u6BB5\u53EF\u88AB\u771F\u5B9E CsvService \u6B63\u786E\u56DE\u8BFB",
+    "Timestamp": "2026-11-21T19:09:25.4078295\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E MasterWindow.Icon \u975E\u7A7A\u4E14\u5C3A\u5BF8\u6709\u6548",
+    "Timestamp": "2026-11-21T19:09:29.2419605\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "MasterWindow \u6807\u9898\u680F\u56FE\u6807\u53E5\u67C4\u53EF\u67E5\u8BE2\uFF08small=0x73D0CD9, big=0x3A1A8F\uFF09",
+    "Timestamp": "2026-11-21T19:09:29.2420864\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "MasterView \u5728 Light \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:29.2420909\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "MasterView \u5728 Dark \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:29.2420953\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "MasterView \u5728 IndustrialBlue \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:29.2421005\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "MasterView \u5728 IndustrialDark \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:29.2421042\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "\u5DF2\u4FDD\u5B58\u4EE3\u8868\u622A\u56FE master.png",
+    "Timestamp": "2026-11-21T19:09:29.2421072\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "\u771F\u5B9E SlaveWindow.Icon \u975E\u7A7A\u4E14\u5C3A\u5BF8\u6709\u6548",
+    "Timestamp": "2026-11-21T19:09:32.9334707\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "SlaveWindow \u6807\u9898\u680F\u56FE\u6807\u53E5\u67C4\u53EF\u67E5\u8BE2\uFF08small=0xE2094B, big=0xA21289\uFF09",
+    "Timestamp": "2026-11-21T19:09:32.9334866\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "SlaveView \u5728 Light \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:32.9334906\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "SlaveView \u5728 Dark \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:32.9334989\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "SlaveView \u5728 IndustrialBlue \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:32.9335031\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "SlaveView \u5728 IndustrialDark \u4E0B\u5B9E\u9645\u5E03\u5C40\u5E76 RenderTargetBitmap \u6E32\u67D3\u65E0\u5F02\u5E38",
+    "Timestamp": "2026-11-21T19:09:32.9335066\u002B08:00"
+  },
+  {
+    "Area": "\u7A97\u53E3\u4E3B\u9898\u56FE\u6807",
+    "Status": "PASS",
+    "Detail": "\u5DF2\u4FDD\u5B58\u4EE3\u8868\u622A\u56FE slave.png",
+    "Timestamp": "2026-11-21T19:09:32.9335099\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u4E24\u4E2A\u771F\u5B9E\u4E3B\u7AD9\u4F1A\u8BDD\u62E5\u6709\u4E0D\u540C SessionId \u4E0E PacketMonitor \u5B9E\u4F8B",
+    "Timestamp": "2026-11-21T19:09:32.9996642\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u5207\u56DE\u4F1A\u8BDD A \u4FDD\u6301 1502 \u914D\u7F6E",
+    "Timestamp": "2026-11-21T19:09:33.0018947\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u5207\u5230\u4F1A\u8BDD B \u4FDD\u6301 1503\uFF0C\u4F1A\u8BDD A \u672A\u88AB\u8986\u76D6",
+    "Timestamp": "2026-11-21T19:09:33.0037407\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u5411\u4F1A\u8BDD A \u6CE8\u5165\u771F\u5B9E PacketMonitor \u5E27\u540E\u4F1A\u8BDD B \u4ECD\u4E3A 0\uFF0C\u62A5\u6587\u9694\u79BB",
+    "Timestamp": "2026-11-21T19:09:33.4035666\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u590D\u5236\u4F1A\u8BDD\u6DF1\u62F7\u8D1D\u5DE5\u4F5C\u533A\u4F46\u4F7F\u7528\u72EC\u7ACB SessionId",
+    "Timestamp": "2026-11-21T19:09:33.4557848\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u4FEE\u6539\u526F\u672C\u7AEF\u53E3\u4E0D\u56DE\u5199\u539F\u4F1A\u8BDD\uFF0C\u914D\u7F6E\u9694\u79BB",
+    "Timestamp": "2026-11-21T19:09:33.4557994\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u8D8B\u52BF\u91CD\u590D\u503C\u538B\u7F29\u3001\u65AD\u70B9\u4FDD\u7559\u53CA\u65AD\u70B9\u540E\u6062\u590D\u91C7\u6837\u56DE\u5F52\u901A\u8FC7",
+    "Timestamp": "2026-11-21T19:09:33.4579183\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "TrendService \u6709\u754C\u5BB9\u91CF 4 \u751F\u6548",
+    "Timestamp": "2026-11-21T19:09:33.4579326\u002B08:00"
+  },
+  {
+    "Area": "\u7B80\u5355\u56DE\u5F52",
+    "Status": "PASS",
+    "Detail": "\u73B0\u6709 CsvService UTF-8 BOM\u3001\u4E2D\u6587/\u9017\u53F7/\u5F15\u53F7/\u6362\u884C\u5F80\u8FD4\u56DE\u5F52\u901A\u8FC7",
+    "Timestamp": "2026-11-21T19:09:33.4640298\u002B08:00"
+  }
+]

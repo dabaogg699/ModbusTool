@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModbusTool.App\ModbusTool.App.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net8.0-windows;net6.0-windows</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>ModbusSlave</AssemblyName>
+    <RootNamespace>ModbusSlaveApp</RootNamespace>
+    <Product>ModbusSlave</Product>
+    <AssemblyTitle>ModbusSlave</AssemblyTitle>
+    <Description>Modbus 从站调试工具</Description>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <BuildTime Condition="'$(BuildTime)' == ''">$([System.DateTime]::Now.ToString('yyyy-MM-dd HH:mm:ss'))</BuildTime>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyMetadata Include="BuildTime" Value="$(BuildTime)" />
+    <AssemblyMetadata Include="BuildSdk" Value="$(NETCoreSdkVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\app.ico" />
+    <Resource Include="Assets\app.ico" />
+    <None Include="Assets\app.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

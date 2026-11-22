@@ -1,0 +1,33 @@
+# 构建输出
+[Bb]in/
+[Oo]bj/
+publish/
+TestResults/
+
+# IDE 与编辑器
+.vs/
+.vscode/
+.idea/
+.trae/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 运行期日志与本地缓存
+logs/
+*.log
+!docs/archive/screenshots/**/*.log
+
+# 本地发布与更新产物
+update-settings.json
+*.nupkg
+*.snupkg
+
+# 本地截图缓存
+.screenshots/
+
+# 操作系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
