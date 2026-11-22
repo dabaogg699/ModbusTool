@@ -43,7 +43,9 @@ Windows 7 需要预先安装 SP1 与系统补丁 KB2533623；串口功能受系�
 
 ## 下载与运行
 
-发布产物统一位于 `publish/`，按 **Setup（安装版）** 与 **Portable（免安装版）** 分目录存放，文件名格式为：
+**下载地址：[GitHub Releases](https://github.com/dabaogg699/ModbusTool/releases)**（含安装版、免安装版与源码包，进入对应版本下载附件）。
+
+发布产物按 **Setup（安装版）** 与 **Portable（免安装版）** 分类，文件名格式为：
 
 ```text
 Setup/ModbusTool-v<版本>-Setup-net8.exe          # 安装版，Win10 1809+ / Win11，需 .NET 8 Runtime
