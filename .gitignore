@@ -27,6 +27,9 @@ update-settings.json
 # 本地截图缓存
 .screenshots/
 
+# WorkBuddy 本地工作数据
+.workbuddy/
+
 # 操作系统文件
 Thumbs.db
 Desktop.ini
